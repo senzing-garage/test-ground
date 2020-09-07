@@ -102,12 +102,19 @@
 						</h3>
 						<div class="mb-1 text-muted">Nov 12</div>
 						<p class="card-text mb-auto">This is a wider card with
-							supporting text below as a natural lead-in to additional content.</p>
+							supporting text below as a natural lead-in to additional content.
+						</p>
 						<p>
 							Version <span class="senzing-artifact-version"></span>
 						</p>
-						<a class="senzing-add-href-for-github-repository" href="#">Continue
-							reading</a>
+						<div class="d-flex justify-content-between">
+						<a class="senzing-add-href-for-github-repository float-right" href="#">Continue
+							reading</a> <a download class="senzing-add-href-for-artifact"
+							href="#">
+							<button type="button" class="btn btn-primary align-right">Download</button>
+						</a>
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -194,6 +201,7 @@
 				$("<span>" + certifiedCurrent + "</span>").appendTo(".senzing-artifact-version")
 				$("<span>" + description + "</span>").appendTo(".senzing-description")
 				$('.senzing-add-href-for-github-repository').attr('href', "https://github.com/Senzing/stream-loader/tree/" + certifiedCurrent);
+				$('.senzing-add-href-for-artifact').attr('href', "https://raw.githubusercontent.com/Senzing/stream-loader/" + certifiedCurrent + "/stream-loader.py");
 			
 			});
 		});
