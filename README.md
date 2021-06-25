@@ -2,4 +2,8 @@
 
 An area for testing ideas.  May be wiped out at any time.
 
-blah
+## Support
+
+Senzing offers
+[free support](http://hub.senzing.com/support)
+for this repository.
