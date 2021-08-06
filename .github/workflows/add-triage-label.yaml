@@ -7,8 +7,6 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-# MJD test 2
-
 name: Simple Issue Labeler
 on:
   issues:
