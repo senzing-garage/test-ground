@@ -1,7 +1,7 @@
 # Based on
 # - https://github.com/srggrs/assign-one-project-github-action
 
-name: issue test
+name: identify_cusomter
 
 on:
   issues:
@@ -18,16 +18,6 @@ env:
   SLACK_HASHES: ${{ secrets.SENZING_GITHUB_SLACK_MAP }}
 
 jobs:
-  get-file:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Read package.json
-      id: package
-      uses: juliangruber/read-file-action@v1
-      with:
-        path: ./.github/CODEOWNERS
-    - name: Echo package.json
-      run: echo "${{ steps.package.outputs.content }}"
   check-membership:
     runs-on: ubuntu-latest
     steps:
