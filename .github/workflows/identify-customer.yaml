@@ -21,7 +21,7 @@ jobs:
     - name: run script
       env:
           BOOL: ${{ contains( env.MEMBER_LIST, env.CREATOR ) }}
-      if: ${{ env.BOOL == 'false' }}
+#      if: ${{ env.BOOL == 'false' }}
       uses: Senzing/github-action-identify-customer@issue-3.macy.1
   automate-issues-labels:
     runs-on: ubuntu-latest
