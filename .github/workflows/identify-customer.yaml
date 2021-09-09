@@ -1,6 +1,3 @@
-# Based on
-# - https://github.com/srggrs/assign-one-project-github-action
-
 name: identify_cusomter
 
 on:
