@@ -1,25 +1,22 @@
 # Based on
 # - https://github.com/srggrs/assign-one-project-github-action
 
-name: Auto Assign to Project(s)
+name: Auto Assign issue to project
 
 on:
   issues:
-    types: [opened, labeled]
+    types:
+      - reopened
+      - opened
 env:
   GITHUB_TOKEN: ${{ secrets.SENZING_GITHUB_ACCESS_TOKEN }}
-  REPO_URL: ${{ github.event.repository.url}}
 
 jobs:
   assign_one_project:
     runs-on: ubuntu-latest
-    name: Assign to One Project
     steps:
-    - name: Assign NEW issues and NEW pull requests to project 2
-      uses: SamMacy/assign-one-project-github-action@1.3.0
+    - name: Assign issues to project
+      uses: Senzing/github-action-add-issue-to-project@1.0.0
       with:
-        project1: 'https://github.com/orgs/Senzing/projects/2'
-        project2: 'https://github.com/orgs/Senzing/projects/6'
-        topic1: 't-comm'
-        topic2: 't-ast'
+        project: 'https://github.com/orgs/Senzing/projects/9'
         column_name: 'Backlog'
