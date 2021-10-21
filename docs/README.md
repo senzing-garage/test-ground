@@ -1,16 +1,36 @@
-# Test Ground
+# Senzing Helm Charts
 
-## Intro
+The repository of Senzing Helm Charts is located at
+[github.com/Senzing/charts](https://github.com/Senzing/charts).
 
-You are at the test ground.
+## Add helm repository
 
+1. Example:
 
-## Docker
+    ```console
+    helm repo add senzing 'https://senzing.github.io/charts/'
+    ```
 
-On [DockerHub](http://hub.dockter.com)
+## List helm repositories
 
-```console
+1. Example:
 
-docker run ...
+    ```console
+    helm repo list
+    ```
 
-```
+## View charts in Senzing Helm repository
+
+1. Example:
+
+    ```console
+    helm search senzing
+    ```
+
+## Remove helm repository
+
+1. Example:
+
+    ```console
+    helm repo remove senzing
+    ```
