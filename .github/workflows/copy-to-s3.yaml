@@ -20,6 +20,8 @@ jobs:
     - name: Get the version
       id: get_version
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+    - name: Echo version
+      run: echo ${{ steps.get_version.outputs.VERSION }}
 #    - name: Copy cloudformation-senzing-basic.yaml to S3
 #      run: bash scripts/pipeline/release.sh ${{secrets.SENZING_AWS_MARKETPLACE_BUCKET_NAME}} "cloudformation-senzing-basic.yaml" ${{secrets.SENZING_AWS_ACCESS_KEY}} ${{secrets.SENZING_AWS_ACCESS_SECRET}} "basic/cloudformation-senzing-basic.yaml"
 #    - name: Copy cloudformation-senzing-basic.yaml to S3 with release
