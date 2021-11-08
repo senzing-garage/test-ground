@@ -22,7 +22,7 @@ jobs:
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
     - run: echo ${{ steps.get_version.outputs.VERSION }}
     - name: Copy cloudformation-senzing-basic.yaml to S3
-      run: bash scripts/pipeline/copy-to-s3.sh ${{secrets.SENZING_AWS_MARKETPLACE_BUCKET_NAME}} "basic/test.yaml" ${{secrets.SENZING_AWS_ACCESS_KEY}} ${{secrets.SENZING_AWS_ACCESS_SECRET}} "cloudformation-senzing-basic.yaml"
+      run: bash .github/workflows/copy-to-s3.sh ${{secrets.SENZING_AWS_MARKETPLACE_BUCKET_NAME}} "basic/test.yaml" ${{secrets.SENZING_AWS_ACCESS_KEY}} ${{secrets.SENZING_AWS_ACCESS_SECRET}} "cloudformation-senzing-basic.yaml"
 #      run: bash scripts/pipeline/release.sh ${{secrets.SENZING_AWS_MARKETPLACE_BUCKET_NAME}} "basic/cloudformation-senzing-basic.yaml" ${{secrets.SENZING_AWS_ACCESS_KEY}} ${{secrets.SENZING_AWS_ACCESS_SECRET}} "cloudformation-senzing-basic.yaml"
 #    - name: Copy cloudformation-senzing-basic.yaml to S3 with release
 #      run: bash scripts/pipeline/release.sh ${{secrets.SENZING_AWS_MARKETPLACE_BUCKET_NAME}} "basic/cloudformation-senzing-basic.yaml" ${{secrets.SENZING_AWS_ACCESS_KEY}} ${{secrets.SENZING_AWS_ACCESS_SECRET}} "cloudformation-senzing-basic.yaml"
