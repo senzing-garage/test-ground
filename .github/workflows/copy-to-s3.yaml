@@ -21,7 +21,7 @@ jobs:
       run: ls -al # list the files for confirmation.
     - name: pwd
       run: pwd
-    - name
+    - name: aws test
       run: aws
     - name: Get the version
       id: get_version
