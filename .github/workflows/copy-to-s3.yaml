@@ -21,8 +21,16 @@ jobs:
       run: ls -al # list the files for confirmation.
     - name: pwd
       run: pwd
-    - name: aws test
-      run: aws
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.SENZING_AWS_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.SENZING_AWS_ACCESS_SECRET }}
+        aws-region: us-east-1
+        role-duration-seconds: 1200
+        role-session-name: MySessionName
+#        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+#        role-external-id: ${{ secrets.AWS_ROLE_EXTERNAL_ID }}
     - name: Get the version
       id: get_version
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
