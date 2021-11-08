@@ -13,6 +13,10 @@ def main():
     files = [f for f in os.listdir('.') if os.path.isfile(f)]
     print("files: ")
     print(files)
+    
+    files = [f for f in os.listdir('..') if os.path.isfile(f)]
+    print("files: ")
+    print(files)
 
     bucket_name=sys.argv[1]
     aws_key=sys.argv[2]
