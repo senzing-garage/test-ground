@@ -1,0 +1,26 @@
+# Based on
+# - https://docs.github.com/en/actions/guides/adding-labels-to-issues
+# - https://github.com/andymckay/labeler
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Copy CFTs to S3
+on:
+  release:
+    types:
+      - published
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Get the version
+      id: get_version
+      run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+#    - name: Copy cloudformation-senzing-basic.yaml to S3
+#      run: bash scripts/pipeline/release.sh ${{secrets.SENZING_AWS_MARKETPLACE_BUCKET_NAME}} "cloudformation-senzing-basic.yaml" ${{secrets.SENZING_AWS_ACCESS_KEY}} ${{secrets.SENZING_AWS_ACCESS_SECRET}} "basic/cloudformation-senzing-basic.yaml"
+#    - name: Copy cloudformation-senzing-basic.yaml to S3 with release
+#      run: bash scripts/pipeline/release.sh ${{secrets.SENZING_AWS_MARKETPLACE_BUCKET_NAME}} "cloudformation-senzing-basic.yaml" ${{secrets.SENZING_AWS_ACCESS_KEY}} ${{secrets.SENZING_AWS_ACCESS_SECRET}} "basic/cloudformation-senzing-basic.yaml"
