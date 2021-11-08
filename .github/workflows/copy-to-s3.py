@@ -10,11 +10,11 @@ def main():
 
     import os
     print("!!!!!! CWD is :" + os.getcwd())
-    files = [f for f in os.listdir('.') if os.path.isfile(f)]
+    files = [f for f in os.listdir('.')]
     print("files: ")
     print(files)
     
-    files = [f for f in os.listdir('..') if os.path.isfile(f)]
+    files = [f for f in os.listdir('..')]
     print("files: ")
     print(files)
 
