@@ -8,6 +8,9 @@ def main():
         # for 5 arguments.
         sys.exit(1)
 
+    import os
+    print("!!!!!! CWD is :" + os.getcwd())
+
     bucket_name=sys.argv[1]
     aws_key=sys.argv[2]
     aws_access_key=sys.argv[3]
