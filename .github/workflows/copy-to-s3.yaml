@@ -34,6 +34,14 @@ jobs:
     - name: Get the version
       id: get_version
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+    - name: Copy cloudformation-senzing-basic.yaml to S3
+      run: aws s3 cp cloudformation-senzing-basic.yaml s3://${{ secrets.SENZING_AWS_MARKETPLACE_BUCKET_NAME }}/test.yaml
+
+#      env:
+#        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#        AWS_DEFAULT_REGION: 'ap-south-1'
+
 #    - run: echo ${{ steps.get_version.outputs.VERSION }}
 #    - name: Copy cloudformation-senzing-basic.yaml to S3
 #      run: bash .github/workflows/copy-to-s3.sh ${{secrets.SENZING_AWS_MARKETPLACE_BUCKET_NAME}} "basic/test.yaml" ${{secrets.SENZING_AWS_ACCESS_KEY}} ${{secrets.SENZING_AWS_ACCESS_SECRET}} "cloudformation-senzing-basic.yaml"
