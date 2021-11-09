@@ -24,4 +24,4 @@ jobs:
     - name: Copy cloudformation-senzing-database.yaml to S3
       run: aws s3 cp cloudformation-senzing-database.yaml s3://senzingbuilds/jeffa/cloudformation-senzing-database.yaml
     - name: Copy cloudformation-senzing-database.yaml to S3 with version number
-      run: aws s3 cp cloudformation-senzing-database.yaml.yaml s3://senzingbuilds/jeffa/cloudformation-senzing-database.yaml-${{ steps.get_version.outputs.VERSION }}.yaml
+      run: aws s3 cp cloudformation-senzing-database.yaml s3://senzingbuilds/jeffa/cloudformation-senzing-database.yaml-${{ steps.get_version.outputs.VERSION }}.yaml
