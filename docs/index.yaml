@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   phppgadmin:
   - apiVersion: v2
-    created: "2021-11-09T13:05:00.802098073-05:00"
+    created: "2021-11-09T13:41:49.17015884-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -29,7 +29,7 @@ entries:
     version: 3.0.0
   senzing-api-server:
   - apiVersion: v2
-    created: "2021-11-09T13:05:00.80586557-05:00"
+    created: "2021-11-09T13:41:49.176143366-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -57,7 +57,7 @@ entries:
     version: 2.0.0
   senzing-apt:
   - apiVersion: v2
-    created: "2021-11-09T13:05:00.808342611-05:00"
+    created: "2021-11-09T13:41:49.179278147-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -83,7 +83,7 @@ entries:
   senzing-base:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-09T13:05:00.809315071-05:00"
+    created: "2021-11-09T13:41:49.180450073-05:00"
     description: A Senzing environment
     digest: 75849bcdbd1db3742c5729efa452d7b90688f074e4785422abe023dcb1299be2
     home: http://senzing.com
@@ -99,7 +99,7 @@ entries:
   senzing-configurator:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-09T13:05:00.811598049-05:00"
+    created: "2021-11-09T13:41:49.182170889-05:00"
     description: A Senzing configuration micro service.
     digest: 97aea752fa954f33b8c9ccda5e27f5dea28ebfe3542b3aae5dc0a783706a7665
     home: http://senzing.com
@@ -115,7 +115,7 @@ entries:
     version: 1.3.0
   senzing-console:
   - apiVersion: v2
-    created: "2021-11-09T13:05:00.814367293-05:00"
+    created: "2021-11-09T13:41:49.186036447-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -140,13 +140,13 @@ entries:
     version: 2.0.0
   senzing-entity-search-web-app:
   - apiVersion: v2
-    created: "2021-11-09T13:05:00.8173232-05:00"
+    created: "2021-11-09T13:41:49.189993008-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: The Senzing Entity Search WebApp
-    digest: 0af577b577ba67b467acba4e029d92acb785f9868bbc56c1e11cfb0969fa0619
+    digest: 904d2a07da3691d983a394ce9de7eb7eec54852bad59421016fe7be149433f90
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-entity-search-web-app
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -164,7 +164,7 @@ entries:
     version: 2.0.0
   senzing-init-container:
   - apiVersion: v2
-    created: "2021-11-09T13:05:00.819644418-05:00"
+    created: "2021-11-09T13:41:49.192443747-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -188,7 +188,7 @@ entries:
     version: 2.0.0
   senzing-postgresql-client:
   - apiVersion: v2
-    created: "2021-11-09T13:05:00.822570145-05:00"
+    created: "2021-11-09T13:41:49.196468404-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -213,7 +213,7 @@ entries:
   senzing-redoer:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-09T13:05:00.823880378-05:00"
+    created: "2021-11-09T13:41:49.199339191-05:00"
     description: Processes Senzing redo records
     digest: c9503457fb508622c694693f457162ad2820f8639f5c4628cbfd3c717b43a792
     home: http://senzing.com
@@ -232,7 +232,7 @@ entries:
     version: 1.3.0
   senzing-stream-loader:
   - apiVersion: v2
-    created: "2021-11-09T13:05:00.828223046-05:00"
+    created: "2021-11-09T13:41:49.204354671-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -258,7 +258,7 @@ entries:
     version: 2.0.0
   senzing-stream-producer:
   - apiVersion: v2
-    created: "2021-11-09T13:05:00.831181717-05:00"
+    created: "2021-11-09T13:41:49.207656572-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -285,7 +285,7 @@ entries:
     version: 2.0.0
   senzing-yum:
   - apiVersion: v2
-    created: "2021-11-09T13:05:00.833743755-05:00"
+    created: "2021-11-09T13:41:49.210737101-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -308,4 +308,4 @@ entries:
     urls:
     - senzing-yum-2.0.0.tgz
     version: 2.0.0
-generated: "2021-11-09T13:05:00.79846674-05:00"
+generated: "2021-11-09T13:41:49.166088876-05:00"
