@@ -20,10 +20,10 @@ jobs:
     - name: Get the version of the just published release
       id: get_version
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-    - name: Copy ${{ env.DAY_OF_WEEK }}.yaml to S3
-      run: aws s3 cp ${{ env.DAY_OF_WEEK }}.yaml s3://senzingbuilds/jeffa/${{ env.DAY_OF_WEEK }}.yaml
-    - name: Copy ${{ env.DAY_OF_WEEK }}.yaml to S3 with version number
-      run: aws s3 cp ${{ env.DAY_OF_WEEK }}.yaml s3://senzingbuilds/jeffa/${{ env.DAY_OF_WEEK }}-${{ steps.get_version.outputs.VERSION }}.yaml
+    - name: Copy ${{ env.FILE_TO_COPY_1 }}.yaml to S3
+      run: aws s3 cp ${{ env.FILE_TO_COPY_1 }}.yaml s3://senzingbuilds/jeffa/${{ env.FILE_TO_COPY_1 }}.yaml
+    - name: Copy ${{ env.FILE_TO_COPY_1 }}.yaml to S3 with version number
+      run: aws s3 cp ${{ env.FILE_TO_COPY_1 }}.yaml s3://senzingbuilds/jeffa/${{ env.FILE_TO_COPY_1 }}-${{ steps.get_version.outputs.VERSION }}.yaml
     - name: Copy cloudformation-senzing-database.yaml to S3
       run: aws s3 cp cloudformation-senzing-database.yaml s3://senzingbuilds/jeffa/cloudformation-senzing-database.yaml
     - name: Copy cloudformation-senzing-database.yaml to S3 with version number
