@@ -1,12 +1,3 @@
-# Based on
-# - https://docs.github.com/en/actions/guides/adding-labels-to-issues
-# - https://github.com/andymckay/labeler
-
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
 name: Copy CFTs to S3
 on:
   release:
@@ -17,38 +8,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: check the file list
-      run: ls -al # list the files for confirmation.
-    - name: pwd
-      run: pwd
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.SENZING_AWS_ACCESS_KEY }}
         aws-secret-access-key: ${{ secrets.SENZING_AWS_ACCESS_SECRET }}
         aws-region: us-east-1
-#        role-duration-seconds: 120
-#        role-session-name: MySessionName
-#        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-#        role-external-id: ${{ secrets.AWS_ROLE_EXTERNAL_ID }}
-    - name: Get the version
+    - name: Get the version of the just published release
       id: get_version
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
     - name: Copy cloudformation-senzing-basic.yaml to S3
-      run: aws s3 cp cloudformation-senzing-basic.yaml s3://senzingbuilds/jeffa/test.yaml
-    - name: Copy cloudformation-senzing-basic.yaml to S3
-      run: aws s3 cp cloudformation-senzing-basic.yaml s3://senzingbuilds/jeffa/test-${{ steps.get_version.outputs.VERSION }}.yaml
-
-
-
-#      env:
-#        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#        AWS_DEFAULT_REGION: 'ap-south-1'
-
-#    - run: echo ${{ steps.get_version.outputs.VERSION }}
-#    - name: Copy cloudformation-senzing-basic.yaml to S3
-#      run: bash .github/workflows/copy-to-s3.sh ${{secrets.SENZING_AWS_MARKETPLACE_BUCKET_NAME}} "basic/test.yaml" ${{secrets.SENZING_AWS_ACCESS_KEY}} ${{secrets.SENZING_AWS_ACCESS_SECRET}} "cloudformation-senzing-basic.yaml"
-#      run: bash scripts/pipeline/release.sh ${{secrets.SENZING_AWS_MARKETPLACE_BUCKET_NAME}} "basic/cloudformation-senzing-basic.yaml" ${{secrets.SENZING_AWS_ACCESS_KEY}} ${{secrets.SENZING_AWS_ACCESS_SECRET}} "cloudformation-senzing-basic.yaml"
-#    - name: Copy cloudformation-senzing-basic.yaml to S3 with release
-#      run: bash scripts/pipeline/release.sh ${{secrets.SENZING_AWS_MARKETPLACE_BUCKET_NAME}} "basic/cloudformation-senzing-basic.yaml" ${{secrets.SENZING_AWS_ACCESS_KEY}} ${{secrets.SENZING_AWS_ACCESS_SECRET}} "cloudformation-senzing-basic.yaml"
+      run: aws s3 cp cloudformation-senzing-basic.yaml s3://senzingbuilds/jeffa/cloudformation-senzing-basic.yaml
+    - name: Copy cloudformation-senzing-basic.yaml to S3 with version number
+      run: aws s3 cp cloudformation-senzing-basic.yaml s3://senzingbuilds/jeffa/cloudformation-senzing-basic-${{ steps.get_version.outputs.VERSION }}.yaml
+    - name: Copy cloudformation-senzing-database.yaml to S3
+      run: aws s3 cp cloudformation-senzing-database.yaml s3://senzingbuilds/jeffa/cloudformation-senzing-database.yaml.yaml
+    - name: Copy cloudformation-senzing-database.yaml to S3 with version number
+      run: aws s3 cp cloudformation-senzing-database.yaml.yaml s3://senzingbuilds/jeffa/cloudformation-senzing-database.yaml-${{ steps.get_version.outputs.VERSION }}.yaml
