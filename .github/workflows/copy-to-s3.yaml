@@ -6,6 +6,7 @@ on:
 jobs:
   Copy_CFTs_to_S3:
     runs-on: ubuntu-latest
+    name: Copy CFTs to S3
     steps:
     - uses: actions/checkout@v2
     - name: Configure AWS Credentials
