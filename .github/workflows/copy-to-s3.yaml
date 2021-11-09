@@ -4,7 +4,7 @@ on:
     types:
       - published
 jobs:
-  build:
+  Copy_CFTs_to_S3:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
