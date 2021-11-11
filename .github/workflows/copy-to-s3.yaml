@@ -21,8 +21,8 @@ jobs:
     - name: Get the version of the just published release
       id: get_version
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-#    - name: Copy ${{ env.FILE_TO_COPY_1 }}.yaml to S3
-#      run: aws s3 cp ${{ env.FILE_TO_COPY_1 }}.yaml s3://public-read-access/aws-cloudformation-database-cluster/test.yaml
+    - name: Copy ${{ env.FILE_TO_COPY_1 }}.yaml to S3
+      run: aws s3 cp ${{ env.FILE_TO_COPY_1 }}.yaml s3://public-read-access/aws-cloudformation-database-cluster/test.yaml
     - name: Copy ${{ env.FILE_TO_COPY_1 }}.yaml to S3 with version number
       run: aws s3 cp ${{ env.FILE_TO_COPY_1 }}.yaml s3://senzing-aws-marketplace/basic/test-${{ steps.get_version.outputs.VERSION }}.yaml
 #    - name: Copy ${{ env.FILE_TO_COPY_2 }}.yaml to S3
