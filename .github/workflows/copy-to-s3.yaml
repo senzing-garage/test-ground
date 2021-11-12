@@ -21,11 +21,11 @@ jobs:
     - name: Get the version of the just published release
       id: get_version
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-    - name: Copy ${{ env.FILE_TO_COPY_1 }}.yaml to S3
-      run: aws s3 cp ${{ env.FILE_TO_COPY_1 }}.yaml s3://public-read-access/aws-cloudformation-database-cluster/test.yaml
+#    - name: Copy ${{ env.FILE_TO_COPY_1 }}.yaml to S3
+#      run: aws s3 cp ${{ env.FILE_TO_COPY_1 }}.yaml s3://${{ SENZING_AWS_MARKETPLACE_BUCKET_NAME }}/basic/${{ env.FILE_TO_COPY_1 }}.yaml
     - name: Copy ${{ env.FILE_TO_COPY_1 }}.yaml to S3 with version number
-      run: aws s3 cp ${{ env.FILE_TO_COPY_1 }}.yaml s3://senzing-aws-marketplace/basic/test-${{ steps.get_version.outputs.VERSION }}.yaml
+      run: aws s3 cp ${{ env.FILE_TO_COPY_1 }}.yaml s3://${{ SENZING_AWS_MARKETPLACE_BUCKET_NAME }}/basic/${{ env.FILE_TO_COPY_1 }}-${{ steps.get_version.outputs.VERSION }}.yaml
 #    - name: Copy ${{ env.FILE_TO_COPY_2 }}.yaml to S3
-#      run: aws s3 cp ${{ env.FILE_TO_COPY_2 }}.yaml s3://senzingbuilds/jeffa/${{ env.FILE_TO_COPY_2 }}.yaml
-#    - name: Copy cloudformation-senzing-database.yaml to S3 with version number
-#      run: aws s3 cp ${{ env.FILE_TO_COPY_2 }}.yaml s3://senzingbuilds/jeffa/${{ env.FILE_TO_COPY_2 }}-${{ steps.get_version.outputs.VERSION }}.yaml
+#      run: aws s3 cp ${{ env.FILE_TO_COPY_2 }}.yaml s3://${{ SENZING_AWS_MARKETPLACE_BUCKET_NAME }}/database/${{ env.FILE_TO_COPY_2 }}.yaml
+    - name: Copy ${{ env.FILE_TO_COPY_2 }} to S3 with version number
+      run: aws s3 cp ${{ env.FILE_TO_COPY_2 }}.yaml s3://${{ SENZING_AWS_MARKETPLACE_BUCKET_NAME }}/database/${{ env.FILE_TO_COPY_2 }}-${{ steps.get_version.outputs.VERSION }}.yaml
