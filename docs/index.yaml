@@ -2,13 +2,13 @@ apiVersion: v1
 entries:
   arey-mysql-client:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.037938561-05:00"
+    created: "2021-11-15T15:07:58.574133452-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: MySQL client
-    digest: ec1733142c73bc08b507f18a73812066b2a712d3abdbf38601ea14b3ffb28482
+    digest: 71a6ff04773468d16af9991c1d2532ed29da92bf83482a7d87734fc44b9e9499
     home: https://github.com/Senzing/charts/tree/master/charts/arey-mysql-client
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -24,16 +24,39 @@ entries:
     urls:
     - arey-mysql-client-2.0.0.tgz
     version: 2.0.0
+  confluentinc-cp-kafka:
+  - apiVersion: v2
+    created: "2021-11-15T15:07:58.577118408-05:00"
+    dependencies:
+    - name: senzing-common
+      repository: https://hub.senzing.com/charts/
+      version: 1.0.1
+    description: Kafka test client
+    digest: dd33f6d81aed63d8d32d7304eb7b64fba5e8e1467fc133d69ed0136158606fd4
+    home: https://github.com/Senzing/charts/tree/master/charts/confluentinc-cp-kafka
+    icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
+    keywords:
+    - kafka
+    maintainers:
+    - email: support@senzing.com
+      name: Senzing
+    name: confluentinc-cp-kafka
+    sources:
+    - https://hub.docker.com/r/confluentinc/cp-kafka/
+    type: application
+    urls:
+    - confluentinc-cp-kafka-2.0.0.tgz
+    version: 2.0.0
   phppgadmin:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.041447981-05:00"
+    created: "2021-11-15T15:07:58.581492423-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: phpPgAdmin is a web-based administration tool for PostgreSQL. It
       is perfect for PostgreSQL DBAs, newbies, and hosting services.
-    digest: 991e4bcf3228f3daaa85ac76f089b64fbb2d4816b1eb49f965df695fe832806e
+    digest: 6a260ad8c5f3087f048f5099fee1cc180a9a4ec70add45fa52bd6b97c9d3b9d0
     home: https://github.com/phppgadmin/phppgadmin
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -53,13 +76,13 @@ entries:
     version: 3.0.0
   senzing-api-server:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.045863778-05:00"
+    created: "2021-11-15T15:07:58.587954163-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: Senzing API server
-    digest: 62ec82baf3b19b1ec7f4bdddee04eb994d30d89f4957e6d944d9c47d0c4e4ffc
+    digest: 2d3b450dfc57d03c7707f927c031e4d7d9b865bfce9194c6641ec147a8434e07
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-api-server
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -81,13 +104,13 @@ entries:
     version: 2.0.0
   senzing-apt:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.050043451-05:00"
+    created: "2021-11-15T15:07:58.590750362-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: A wrapper over apt package installer prepared for Senzing installs
-    digest: 04631453a3949107703baa08f65d506a54c1b2105ea0fadefe3584d9e1bd87fb
+    digest: cc658d54f747a347bff4f147365a707669c5a1c6e77fd34278cad7ffa4328a37
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-apt
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -106,13 +129,13 @@ entries:
     version: 2.0.0
   senzing-base:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.05379113-05:00"
+    created: "2021-11-15T15:07:58.594435629-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: A Senzing environment
-    digest: f57db5eccf4ae423d3fa5eba2a2ed879c5f580619382a41ff7cc6c3b1c2fbbe8
+    digest: 365672aabb03e50c7612ba226f7ca73f114123e0d7e8152eedd966d9d770e580
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-base
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -130,13 +153,13 @@ entries:
     version: 2.0.0
   senzing-configurator:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.057043085-05:00"
+    created: "2021-11-15T15:07:58.598257559-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: A Senzing configuration micro service.
-    digest: ba29bef3083eae3199c9013a06422a0eafbc9d042bb369b07ef6e30dc7ef1f40
+    digest: f62e99d182023fd218eaad0a54ac5b7b3648199b230a7d271d115f6d388c59c7
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-configurator
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -155,13 +178,13 @@ entries:
     version: 2.0.0
   senzing-console:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.060198608-05:00"
+    created: "2021-11-15T15:07:58.601337219-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: A Senzing environment for console access
-    digest: b24103c647290da8fa8f770a55e429c9335a97d098e7861d2ce7c315649b1679
+    digest: 51c35c95e1064af70cd34c6920ad7da4c033a25360523cebcfd4a2f0d47ea2e1
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-console
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -180,13 +203,13 @@ entries:
     version: 2.0.0
   senzing-entity-search-web-app:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.065046-05:00"
+    created: "2021-11-15T15:07:58.605731854-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: The Senzing Entity Search WebApp
-    digest: c25654b31809e0974ad4034367eb325964d07fbb0e71ff0065c60b0d71a58f59
+    digest: 8f5280a22176ef405cfe5c34c6e7639d951c356f64cc86e48f6581a85cd7c348
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-entity-search-web-app
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -204,13 +227,13 @@ entries:
     version: 2.0.0
   senzing-init-container:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.068251728-05:00"
+    created: "2021-11-15T15:07:58.607971152-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: Performs all of the Senzing initialization requiring "root" authority.
-    digest: 3f45aabea6605b148e54944b7db11fca5c3b98b6c26f5a8c0a7ceb064629af03
+    digest: b35a9d0945ae2448c762c8ef0a29b6401bc69a12e3274871727ca0bfed3f68bd
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-init-container
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -228,13 +251,13 @@ entries:
     version: 2.0.0
   senzing-postgresql-client:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.072495018-05:00"
+    created: "2021-11-15T15:07:58.610602424-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: Postgresql client
-    digest: 14e562a6603316c4e43da4d0b81c19c1d1f4337adaeb6cf4415c00e65b344d03
+    digest: 5c3d935eecc795e653aa71adedc9693b47bd559a7899ab0a9ed6705db477d331
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-postgresql-client
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -252,13 +275,13 @@ entries:
     version: 2.0.0
   senzing-redoer:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.07689445-05:00"
+    created: "2021-11-15T15:07:58.614095167-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: Processes Senzing redo records
-    digest: b1e8c3bd97a097611132c6ba017e7367473817ccf8e315e85dbfb185056e2908
+    digest: 653c84bbe8a95699332456ee35e2f367c4a28e6f853c64c102237e2ef76d3dd7
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-redoer
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -280,13 +303,13 @@ entries:
     version: 2.0.0
   senzing-stream-loader:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.081285373-05:00"
+    created: "2021-11-15T15:07:58.617978736-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: A stream-based loader for Senzing
-    digest: bf5189903635d05f2b30699b6219f59bc270ac4fe6cf91ac8e826be322d30305
+    digest: a744f26340ea69af42c4fd9d7a30d0c44b00ab328f6b7dd7ca4d3e751b439225
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-stream-loader
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -306,13 +329,13 @@ entries:
     version: 2.0.0
   senzing-stream-producer:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.084157958-05:00"
+    created: "2021-11-15T15:07:58.620819632-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: A generator of Senzing data to feed a queue
-    digest: 8ca4ecfee6b9debe94c406bb213a8b9e8e1e3cce88c30ecc4b3ec5d5b22a4ef3
+    digest: 10cff8e1146dfd47f80d08c24a7cfb3a5e22610450a9293bbb8d971f8227cfa8
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-stream-producer
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -333,13 +356,13 @@ entries:
     version: 2.0.0
   senzing-yum:
   - apiVersion: v2
-    created: "2021-11-10T14:55:01.088822207-05:00"
+    created: "2021-11-15T15:07:58.625640037-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
       version: 1.0.1
     description: A wrapper over yum package installer prepared for Senzing installs
-    digest: 29a57dab4eb82ea56b28c954bd10281e9b42b3e07eff798ed9c20e677fcc0e74
+    digest: 607e0f0ed81ac690749069db78025196a7f110479384453908c829957615aead
     home: https://github.com/Senzing/charts/tree/master/charts/senzing-yum
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
@@ -356,4 +379,4 @@ entries:
     urls:
     - senzing-yum-2.0.0.tgz
     version: 2.0.0
-generated: "2021-11-10T14:55:01.034862275-05:00"
+generated: "2021-11-15T15:07:58.57108432-05:00"
