@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   arey-mysql-client:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.03709799-05:00"
+    created: "2021-11-16T16:05:17.478895937-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -26,7 +26,7 @@ entries:
     version: 2.0.0
   confluentinc-cp-kafka:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.041068829-05:00"
+    created: "2021-11-16T16:05:17.483086949-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -47,9 +47,32 @@ entries:
     urls:
     - confluentinc-cp-kafka-2.0.0.tgz
     version: 2.0.0
+  microsoft-mssql-tools:
+  - apiVersion: v2
+    created: "2021-11-16T16:05:17.486477398-05:00"
+    dependencies:
+    - name: senzing-common
+      repository: https://hub.senzing.com/charts/
+      version: 1.0.1
+    description: MS-SQL tools
+    digest: d6dbe0a490569dd3c7e9f88c88ff68aaf233dd2d807689692dcbb48ac248aa96
+    home: https://github.com/Senzing/charts/tree/master/charts/microsoft-mssql-tools
+    icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
+    keywords:
+    - mssql
+    maintainers:
+    - email: support@senzing.com
+      name: Senzing
+    name: microsoft-mssql-tools
+    sources:
+    - https://github.com/Senzing/charts/tree/master/charts/microsoft-mssql-tools
+    type: application
+    urls:
+    - microsoft-mssql-tools-2.0.0.tgz
+    version: 2.0.0
   phppgadmin:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.045357616-05:00"
+    created: "2021-11-16T16:05:17.492681669-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -76,7 +99,7 @@ entries:
     version: 3.0.0
   senzing-api-server:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.050607797-05:00"
+    created: "2021-11-16T16:05:17.49797794-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -104,7 +127,7 @@ entries:
     version: 2.0.0
   senzing-apt:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.053838689-05:00"
+    created: "2021-11-16T16:05:17.50130791-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -129,7 +152,7 @@ entries:
     version: 2.0.0
   senzing-base:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.059784078-05:00"
+    created: "2021-11-16T16:05:17.504939455-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -153,7 +176,7 @@ entries:
     version: 2.0.0
   senzing-configurator:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.064433899-05:00"
+    created: "2021-11-16T16:05:17.50802695-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -178,7 +201,7 @@ entries:
     version: 2.0.0
   senzing-console:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.067359667-05:00"
+    created: "2021-11-16T16:05:17.511246055-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -203,7 +226,7 @@ entries:
     version: 2.0.0
   senzing-entity-search-web-app:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.072062082-05:00"
+    created: "2021-11-16T16:05:17.516144915-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -227,7 +250,7 @@ entries:
     version: 2.0.0
   senzing-init-container:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.075053061-05:00"
+    created: "2021-11-16T16:05:17.520999943-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -251,7 +274,7 @@ entries:
     version: 2.0.0
   senzing-postgresql-client:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.078377043-05:00"
+    created: "2021-11-16T16:05:17.525126531-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -275,7 +298,7 @@ entries:
     version: 2.0.0
   senzing-redoer:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.082460957-05:00"
+    created: "2021-11-16T16:05:17.529160465-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -303,7 +326,7 @@ entries:
     version: 2.0.0
   senzing-stream-loader:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.085949429-05:00"
+    created: "2021-11-16T16:05:17.533215489-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -329,7 +352,7 @@ entries:
     version: 2.0.0
   senzing-stream-producer:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.088289205-05:00"
+    created: "2021-11-16T16:05:17.537788629-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -356,7 +379,7 @@ entries:
     version: 2.0.0
   senzing-yum:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.092604612-05:00"
+    created: "2021-11-16T16:05:17.54143921-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -381,7 +404,7 @@ entries:
     version: 2.0.0
   swaggerapi-swagger-ui:
   - apiVersion: v2
-    created: "2021-11-15T17:52:19.097655965-05:00"
+    created: "2021-11-16T16:05:17.546293453-05:00"
     dependencies:
     - name: senzing-common
       repository: https://hub.senzing.com/charts/
@@ -404,4 +427,4 @@ entries:
     urls:
     - swaggerapi-swagger-ui-2.0.0.tgz
     version: 2.0.0
-generated: "2021-11-15T17:52:19.032120723-05:00"
+generated: "2021-11-16T16:05:17.474538247-05:00"
