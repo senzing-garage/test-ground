@@ -22,5 +22,6 @@ jobs:
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
     - name: Copy ${{ env.FILE_TO_COPY_1 }}.yaml to S3 with version number
       run: aws s3 cp ${{ env.FILE_TO_COPY_1 }}.yaml s3://senzingbuilds/jeffa/${{ env.FILE_TO_COPY_1 }}-${{ steps.get_version.outputs.VERSION }}.yaml
+    - name: Make ${{ env.FILE_TO_COPY_1 }}.yaml with version number public on S3
       run: aws s3api put-object-acl --bucket senzingbuilds --key jeffa/${{ env.FILE_TO_COPY_1 }}-${{ steps.get_version.outputs.VERSION }}.yaml --acl public-read
       #run: aws s3 cp ${{ env.FILE_TO_COPY_1 }}.yaml s3://${{ secrets.SENZING_AWS_BUCKET_NAME }}/aws-cloudformation-ecs-poc-simple/${{ env.FILE_TO_COPY_1 }}-${{ steps.get_version.outputs.VERSION }}.yaml
