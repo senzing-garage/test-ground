@@ -1,7 +1,7 @@
-ARG BASE_IMAGE=debian:10.10@sha256:e5cfab8012b17d80f93a7f567797b0c8a2839069d4f50e499152162152518663
+ARG BASE_IMAGE=debian:10.11@sha256:94ccfd1c5115a6903cbb415f043a0b04e307be3f37b768cf6d6d3edff0021da3
 FROM ${BASE_IMAGE} AS builder
 
-ENV REFRESHED_AT=2021-11-04
+ENV REFRESHED_AT=2022-01-06
 
 LABEL Name="senzing/stream-loader" \
       Maintainer="support@senzing.com" \
