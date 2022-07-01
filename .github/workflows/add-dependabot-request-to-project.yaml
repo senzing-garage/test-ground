@@ -8,7 +8,7 @@ on:
     types:
       - opened
       - reopened
-      - labeled
+      
 env:
   GITHUB_TOKEN: ${{ secrets.SENZING_GITHUB_ACCESS_TOKEN }}
   CREATOR: ${{ github.event.pull_request.user.login }}
