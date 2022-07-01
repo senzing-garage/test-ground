@@ -6,9 +6,11 @@ name: Add dependabot pull requests to project
 on:
   pull_request:
     types:
+      - opened
+      - reopened
       - labeled
 env:
-  GITHUB_TOKEN: ${{ secrets.SENZING_GITHUB_ACCESS_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
   CREATOR: ${{ github.actor }}
 
 jobs:
