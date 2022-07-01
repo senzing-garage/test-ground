@@ -11,7 +11,7 @@ on:
       - labeled
 env:
   GITHUB_TOKEN: ${{ secrets.SENZING_GITHUB_ACCESS_TOKEN }}
-  CREATOR: ${{ github.actor }}
+  CREATOR: ${{ github.event.pull_request.user.login }}
 
 jobs:
   assign_one_project:
