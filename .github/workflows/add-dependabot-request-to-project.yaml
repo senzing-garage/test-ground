@@ -10,7 +10,7 @@ on:
       - reopened
       - labeled
 env:
-  GITHUB_TOKEN: 'test'
+  GITHUB_TOKEN: ${{ secrets.SENZING_GITHUB_ACCESS_TOKEN }}
   CREATOR: ${{ github.actor }}
 
 jobs:
