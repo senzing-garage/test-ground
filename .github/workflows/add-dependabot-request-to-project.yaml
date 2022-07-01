@@ -22,4 +22,3 @@ jobs:
       if: ${{ env.BOOL == 'true' }}
       with:
         project: 'https://github.com/orgs/Senzing/projects/2'
-        column_name: 'In progress'
