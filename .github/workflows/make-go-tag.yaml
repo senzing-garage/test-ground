@@ -1,4 +1,3 @@
-# Based on
 name: make-go-tag.yaml
 
 on:
@@ -13,9 +12,5 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: '0'
-      - name: Print environment variables
-        run: printenv
-      - name: Pull new module version
+      - name: Make go version tag
         uses: Senzing/github-action-make-go-tag@issue-3.dockter.1
