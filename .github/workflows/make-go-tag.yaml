@@ -7,10 +7,10 @@ on:
 
 jobs:
   build:
-    name: Make a v0.0.0 tag
+    name: Make a vM.m.P tag
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Make go version tag
-        uses: Senzing/github-action-make-go-tag@issue-3.dockter.1
+        uses: Senzing/github-action-make-go-tag@main
