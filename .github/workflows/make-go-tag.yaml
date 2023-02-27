@@ -1,0 +1,15 @@
+# Based on
+name: make-go-tag.yaml
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+
+jobs:
+  build:
+    name: Make a v0.0.0 tag
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull new module version
+        uses: Senzing/github-action-make-go-tag@issue-3.dockter.1
