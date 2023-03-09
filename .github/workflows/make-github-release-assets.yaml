@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - run: pwd
-      - run: touch /tmp/bob.txt
+      - run: echo "Test file" > /tmp/bob.txt
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
