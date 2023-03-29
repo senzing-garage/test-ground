@@ -28,5 +28,5 @@ jobs:
       - name: Make go version tag
         uses: Senzing/github-action-make-go-version-file@main
         with:
-          package: 'Bob3'
-          file: '/path/to/bob3.go'
+          package: 'Bob2'
+          file: '/path/to/bob2.go'
