@@ -27,6 +27,6 @@ jobs:
         run: echo ${{ github.event.release.tag_name }}
       - name: Make go version tag
         uses: Senzing/github-action-make-go-version-file@main
-        with:
-          package: 'Bob2'
-          file: '/path/to/bob2.go'
+#        with:
+#          package: 'Bob2'
+#          file: '/path/to/bob2.go'
