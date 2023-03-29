@@ -1,0 +1,29 @@
+name: make-go-cmd-version.yaml
+
+#on:
+#  release:
+#    types: [published]
+
+on: [push]
+
+jobs:
+  build:
+    name: Update cmd/version.go
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Dump env
+        run: env | sort
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - name: PWD
+        run: pwd
+      - name: LS
+        run: ls
+      - name: github.event.release.tag_name
+        run: echo ${{ github.event.release.tag_name }}
+      - name: Make go version tag
+        uses: Senzing/github-action-make-go-version-file@main
