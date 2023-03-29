@@ -4,6 +4,7 @@ name: make-go-cmd-version.yaml
 #  release:
 #    types: [published]
 
+
 on:
   push:
     tags:
