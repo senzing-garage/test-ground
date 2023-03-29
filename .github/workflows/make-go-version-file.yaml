@@ -24,12 +24,5 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
       - name: PWD
         run: pwd
-      - name: LS
-        run: ls
-      - name: github.event.release.tag_name
-        run: echo ${{ github.event.release.tag_name }}
-      - name: Make go version tag
+      - name: Make version.go
         uses: Senzing/github-action-make-go-version-file@main
-        with:
-          version: ${{ github.event.release.tag_name }}
-#          file: '/path/to/bob2.go'
