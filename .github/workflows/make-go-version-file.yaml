@@ -4,6 +4,7 @@ name: make-go-version-file.yaml
 #  release:
 #    types: [published]
 
+
 on:
   push:
     tags:
