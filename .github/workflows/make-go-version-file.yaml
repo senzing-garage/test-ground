@@ -1,9 +1,8 @@
-name: make-go-cmd-version.yaml
+name: make-go-version-file.yaml
 
 #on:
 #  release:
 #    types: [published]
-
 
 on:
   push:
