@@ -19,13 +19,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: '0'
-      - name: Dump env
-        run: env | sort
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
       - name: PWD
         run: pwd
-      - name: Make version.go
-        uses: Senzing/github-action-make-go-version-file@main
+      - name: Make github.go file
+        uses: Senzing/github-action-make-go-github-file@main
