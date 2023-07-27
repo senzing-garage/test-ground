@@ -15,22 +15,24 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - run: pwd
-      - name: Did a file get created (before)
-        run: ls -la
-      - run: echo "Test file" > /tmp/bob.txt
       - name: install create-dmg
         run: brew install create-dmg
+      - run: pwd
+      - run: mkdir output
+      - run: cd output
+      - name: Did a file get created (before)
+        run: ls -la output
+      - run: echo "Test file" > output/bob.txt
       - name: Make a .dmg file
-        run: create-dmg "MJD-Application-Installer.dmg"  "tmp/"
+        run: create-dmg "MJD-Application-Installer.dmg"  "output/"
       - name: Did a file get created (after)
-        run: ls -la
+        run: ls -la output
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: /Users/runner/work/test-ground/test-ground/MJD-Application-Installer.dmg
-          asset_name: bob5.dmg
+          asset_name: bob6.dmg
           tag: ${{ github.ref }}
           overwrite: true
           body: "This is my release text"
