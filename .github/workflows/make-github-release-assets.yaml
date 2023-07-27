@@ -25,13 +25,12 @@ jobs:
         run: create-dmg "MJD-Application-Installer.dmg"  "tmp/"
       - name: Did a file get created (after)
         run: ls -la
-
-      # - name: Upload binaries to release
-      #   uses: svenstaro/upload-release-action@v2
-      #   with:
-      #     repo_token: ${{ secrets.GITHUB_TOKEN }}
-      #     file: /tmp/bob.txt
-      #     asset_name: bob2.txt
-      #     tag: ${{ github.ref }}
-      #     overwrite: true
-      #     body: "This is my release text"
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: /Users/runner/work/test-ground/test-ground/MJD-Application-Installer.dmg
+          asset_name: bob5.dmg
+          tag: ${{ github.ref }}
+          overwrite: true
+          body: "This is my release text"
