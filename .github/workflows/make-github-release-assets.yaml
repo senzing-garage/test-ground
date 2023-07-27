@@ -24,7 +24,7 @@ jobs:
         run: ls -la output
       - run: echo "Test file" > output/bob.txt
       - name: Make a .dmg file
-        run: create-dmg "MJD-Application-Installer.dmg"  "output/"
+        run: create-dmg  --app-drop-link 0 40 "MJD-Application-Installer.dmg"  "output/"
       - name: Did a file get created (after)
         run: ls -la output
       - name: Upload binaries to release
@@ -32,7 +32,7 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: /Users/runner/work/test-ground/test-ground/MJD-Application-Installer.dmg
-          asset_name: bob6.dmg
+          asset_name: bob7.dmg
           tag: ${{ github.ref }}
           overwrite: true
           body: "This is my release text"
