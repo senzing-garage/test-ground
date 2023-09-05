@@ -8,7 +8,10 @@ on: [push]
 jobs:
   build:
     runs-on: windows-latest
-    name: windows
+    strategy:
+      matrix:
+        senzing-version: ["staging", "latest", "3.5.0-23084", "3.6.0-23160"]
+    name: Senzing version ${{ matrix.senzing-version }} - windows
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -17,4 +20,4 @@ jobs:
       - name: Install Senzing API
         uses: Senzing/github-action-install-senzing-api@main
         with:
-          senzing-version: staging
+          senzing-version: ${{ matrix.senzing-version }}
