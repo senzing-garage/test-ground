@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        senzing-version: ["staging", "latest", "3.5.0-23084", "3.6.0-23160"]
-    name: Senzing version ${{ matrix.senzing-version }} - linux
+        senzingapi-version: ["latest", "3.6.0-23160", "3.5.0-23084", "staging"]
+    name: Senzing version ${{ matrix.senzingapi-version }} - linux
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,4 +20,4 @@ jobs:
       - name: Install Senzing API
         uses: Senzing/github-action-install-senzing-api@main
         with:
-          senzing-version: ${{ matrix.senzing-version }}
+          senzingapi-version: ${{ matrix.senzingapi-version }}
