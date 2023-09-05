@@ -1,0 +1,18 @@
+# Based on
+# - https://github.com/marketplace/actions/setup-go-environment
+
+name: go-test-darwin.yaml
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    name: darwin
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install Senzing API
+        uses: Senzing/github-action-install-senzing-api@main
