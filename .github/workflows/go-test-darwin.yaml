@@ -16,3 +16,5 @@ jobs:
           fetch-depth: 0
       - name: Install Senzing API
         uses: Senzing/github-action-install-senzing-api@main
+        with:
+          senzing-version: staging
