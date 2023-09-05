@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - run: pwd
       - run: echo "Test file" > /tmp/bob.txt
       - name: Upload binaries to release
