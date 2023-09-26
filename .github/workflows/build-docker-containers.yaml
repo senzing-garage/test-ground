@@ -30,3 +30,15 @@ jobs:
         run: docker buildx ls
       - name: Dockerhub login
         run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+      - name: Docker image build
+        run: |
+          docker buildx build \
+            --push \
+            --platform linux/arm64,linux/amd64 \
+            --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi-runtime \
+            --build-arg SENZING_APT_REPOSITORY_NAME=senzingstagingrepo_1.0.1-1_all.deb \
+            --build-arg SENZING_APT_REPOSITORY_URL=https://senzing-staging-apt.s3.amazonaws.com \
+            --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi-runtime=3.8.0-23258 \
+            --no-cache \
+            --tag senzing/test-ground:1.1.1 \
+            .
