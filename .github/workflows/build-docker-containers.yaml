@@ -24,3 +24,5 @@ jobs:
         run: git submodule update --init --recursive
       - name: Setup Docker platforms
         run: docker buildx create --use
+      - name: Docker list platforms
+        run: docker buildx ls
