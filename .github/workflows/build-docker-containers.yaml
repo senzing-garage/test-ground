@@ -22,7 +22,7 @@ jobs:
         run: git merge origin/main
       - name: Git Update submodules
         run: git submodule update --init --recursive
-      - name: Setup Docker platforms
-        run: docker buildx create --use
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
       - name: Docker list platforms
         run: docker buildx ls
