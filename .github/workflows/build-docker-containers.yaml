@@ -1,8 +1,8 @@
 name: build-docker-containers.yaml
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - 143.dockter.1
   workflow_dispatch:
 jobs:
   build-docker-container:
@@ -22,5 +22,5 @@ jobs:
         run: git merge origin/main
       - name: Git Update submodules
         run: git submodule update --init --recursive
-      - name: Build Docker container
-        run: make docker-build
+      - name: Setup Docker platforms
+        run: docker buildx create --use
