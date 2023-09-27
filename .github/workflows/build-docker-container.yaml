@@ -11,10 +11,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: '0'
-      - name: Print environment variables
-        run: printenv
-      - name: Git Merge With Main
-        run: git merge origin/main
+          fetch-depth: "0"
       - name: Build Docker container
         run: make docker-build
