@@ -19,7 +19,7 @@ jobs:
         with:
           build-options: "--push"
           image-repository: senzing/test-ground
-          # image-tag: ${{ github.ref_name }}
+          image-tag: ${{ github.ref_name }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           platforms: "linux/amd64,linux/arm64"
           username: ${{ secrets.DOCKERHUB_USERNAME }}
