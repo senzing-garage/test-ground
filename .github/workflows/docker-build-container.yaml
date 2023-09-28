@@ -15,6 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build docker
-        uses: Senzing/github-action-docker-build-buildx@latest
+        uses: Senzing/github-action-docker-buildx-build@latest
         with:
           image-repository: test-ground
