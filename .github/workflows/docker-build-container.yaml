@@ -14,12 +14,10 @@ jobs:
   docker-build-container:
     runs-on: ubuntu-latest
     steps:
-      - name: Build docker
+      - name: Build docker image
         uses: Senzing/github-action-docker-buildx-build@latest
         with:
-          build-options: "--push"
           image-repository: senzing/test-ground
           image-tag: ${{ github.ref_name }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          platforms: "linux/amd64,linux/arm64"
           username: ${{ secrets.DOCKERHUB_USERNAME }}
