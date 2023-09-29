@@ -1,4 +1,4 @@
-name: docker-build-container.
+name: docker-build-container.yaml
 
 on:
   push:

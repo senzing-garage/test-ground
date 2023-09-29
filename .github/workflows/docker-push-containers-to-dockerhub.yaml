@@ -5,10 +5,10 @@ on:
     branches:
       - 143.dockter.3
 
-# on:
-#   push:
-#     tags:
-#       - "[0-9]+.[0-9]+.[0-9]+"
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
 
 jobs:
   docker-push-containers-to-dockerhub:
