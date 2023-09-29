@@ -18,6 +18,7 @@ jobs:
         uses: Senzing/github-action-docker-buildx-build@latest
         with:
           image-repository: senzing/test-ground
+          platforms: linux/amd64,linux/arm64
           image-tag: ${{ github.ref_name }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           username: ${{ secrets.DOCKERHUB_USERNAME }}
