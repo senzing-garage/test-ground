@@ -14,8 +14,8 @@ jobs:
       contents: read    # This is required for actions/checkout
     uses: Senzing/build-resources/.github/workflows/docker-push-containers-to-dockerhub-and-ecr.yaml@main
     with:
-      docker-image-repository: ${{ github.repository }}
-      ecr-image-repository: ${{ github.repository }}
+      docker-image-repository: senzing/test-ground
+      ecr-image-repository: senzing/test-ground
       image-tag: ${{ github.ref_name }}
     secrets:
       AWS_DOCKER_ACCOUNT_ID: ${{ secrets.AWS_DOCKER_ACCOUNT_ID }}
