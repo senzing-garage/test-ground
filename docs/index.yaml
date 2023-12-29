@@ -9,7 +9,7 @@ entries:
       version: 1.0.1
     description: MySQL client
     digest: 3954bc33f2b0094ec688d19e8541d3fb79cd1805b19ae9305fd4981b8ae6ec24
-    home: https://github.com/Senzing/charts/tree/master/charts/arey-mysql-client
+    home: https://github.com/senzing-garage/charts/tree/master/charts/arey-mysql-client
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - mysql
@@ -18,7 +18,7 @@ entries:
       name: Senzing
     name: arey-mysql-client
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/arey-mysql-client
+    - https://github.com/senzing-garage/charts/tree/master/charts/arey-mysql-client
     - https://github.com/arey/mysql-client
     type: application
     urls:
@@ -33,7 +33,7 @@ entries:
       version: 1.0.1
     description: Kafka test client
     digest: 9f893e889942b46ccc049c8daabc91636a1238fd88be56a5b9d3b2b9e2ea4b3d
-    home: https://github.com/Senzing/charts/tree/master/charts/confluentinc-cp-kafka
+    home: https://github.com/senzing-garage/charts/tree/master/charts/confluentinc-cp-kafka
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - kafka
@@ -56,7 +56,7 @@ entries:
       version: 1.0.1
     description: MS-SQL tools
     digest: cf9bd92a8ee5eb95094ff6356b5e31db89e155d5259ae692cdf743bb605ac74b
-    home: https://github.com/Senzing/charts/tree/master/charts/microsoft-mssql-tools
+    home: https://github.com/senzing-garage/charts/tree/master/charts/microsoft-mssql-tools
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - mssql
@@ -65,7 +65,7 @@ entries:
       name: Senzing
     name: microsoft-mssql-tools
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/microsoft-mssql-tools
+    - https://github.com/senzing-garage/charts/tree/master/charts/microsoft-mssql-tools
     type: application
     urls:
     - microsoft-mssql-tools-2.0.0.tgz
@@ -92,7 +92,7 @@ entries:
       name: Senzing
     name: phppgadmin
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/phppgadmin
+    - https://github.com/senzing-garage/charts/tree/master/charts/phppgadmin
     type: application
     urls:
     - phppgadmin-3.0.0.tgz
@@ -106,7 +106,7 @@ entries:
       version: 1.0.1
     description: Senzing API server
     digest: 7b4084de57d9d512bbf143b822176071455813adfa6f0159282d2c2ad9ae916f
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-api-server
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-api-server
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - senzing
@@ -119,8 +119,8 @@ entries:
       name: Senzing
     name: senzing-api-server
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/senzing-api-server
-    - https://github.com/Senzing/senzing-api-server
+    - https://github.com/senzing-garage/charts/tree/master/charts/senzing-api-server
+    - https://github.com/senzing-garage/senzing-api-server
     type: application
     urls:
     - senzing-api-server-2.0.0.tgz
@@ -134,7 +134,7 @@ entries:
       version: 1.0.1
     description: A wrapper over apt package installer prepared for Senzing installs
     digest: e60ac97fbcd7ebcfd6389181b727e57f1c23e4c462a260f6877a8b64b540df3e
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-apt
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-apt
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - senzing
@@ -144,8 +144,8 @@ entries:
       name: Senzing
     name: senzing-apt
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/senzing-apt
-    - https://github.com/Senzing/docker-apt
+    - https://github.com/senzing-garage/charts/tree/master/charts/senzing-apt
+    - https://github.com/senzing-garage/docker-apt
     type: application
     urls:
     - senzing-apt-2.0.0.tgz
@@ -159,7 +159,7 @@ entries:
       version: 1.0.1
     description: A Senzing environment
     digest: 88580392c782d45c785b7d140b8955caa9ad4981a2e2a6691dcdee85693348ae
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-base
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-base
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - senzing
@@ -168,8 +168,8 @@ entries:
       name: Senzing
     name: senzing-base
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/senzing-base
-    - https://github.com/Senzing/docker-senzing-base
+    - https://github.com/senzing-garage/charts/tree/master/charts/senzing-base
+    - https://github.com/senzing-garage/docker-senzing-base
     type: application
     urls:
     - senzing-base-2.0.0.tgz
@@ -182,7 +182,7 @@ entries:
     created: "2021-11-17T16:04:52.221867417-05:00"
     description: Common templates shared by Senzing charts.
     digest: c812faa8bd608098344ab101af73614792f777828cbc3df9a4ddebaf9c635871
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-common
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-common
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - common
@@ -191,7 +191,7 @@ entries:
     - senzing
     name: senzing-common
     sources:
-    - https://github.com/senzing/charts
+    - https://github.com/senzing-garage/charts
     type: library
     urls:
     - senzing-common-1.0.1.tgz
@@ -205,7 +205,7 @@ entries:
       version: 1.0.1
     description: A Senzing configuration micro service.
     digest: ab968779a2266e1b513d23736f198f2ad0189a5c7b9307a62a5f23bbb0b8b037
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-configurator
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-configurator
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - senzing
@@ -215,8 +215,8 @@ entries:
       name: Senzing
     name: senzing-configurator
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/senzing-configurator
-    - https://github.com/Senzing/configurator
+    - https://github.com/senzing-garage/charts/tree/master/charts/senzing-configurator
+    - https://github.com/senzing-garage/configurator
     type: application
     urls:
     - senzing-configurator-2.0.0.tgz
@@ -230,7 +230,7 @@ entries:
       version: 1.0.1
     description: A Senzing environment for console access
     digest: 777b937195faad9dd22b1b18edd1a0fc200f5f9068157b18a9a7c7ebcc1d7b75
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-console
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-console
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - senzing
@@ -240,8 +240,8 @@ entries:
       name: Senzing
     name: senzing-console
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/senzing-console
-    - https://github.com/Senzing/docker-senzing-console
+    - https://github.com/senzing-garage/charts/tree/master/charts/senzing-console
+    - https://github.com/senzing-garage/docker-senzing-console
     type: application
     urls:
     - senzing-console-2.0.0.tgz
@@ -255,7 +255,7 @@ entries:
       version: 1.0.1
     description: The Senzing Entity Search WebApp
     digest: 90d095f6f683c05b63312b11c5db039c85288fa2a32e9ad27f7942475b315ad0
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-entity-search-web-app
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-entity-search-web-app
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - senzing
@@ -264,8 +264,8 @@ entries:
       name: Senzing
     name: senzing-entity-search-web-app
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/senzing-entity-search-web-app
-    - https://github.com/Senzing/entity-search-web-app
+    - https://github.com/senzing-garage/charts/tree/master/charts/senzing-entity-search-web-app
+    - https://github.com/senzing-garage/entity-search-web-app
     type: application
     urls:
     - senzing-entity-search-web-app-2.0.0.tgz
@@ -279,7 +279,7 @@ entries:
       version: 1.0.1
     description: Performs all of the Senzing initialization requiring "root" authority.
     digest: 79af41b28a61227d2c0b0cb1c7d4519ed2d9f29a8784a6126a1f84e17be9b4f4
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-init-container
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-init-container
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - senzing
@@ -288,8 +288,8 @@ entries:
       name: Senzing
     name: senzing-init-container
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/senzing-init-container
-    - https://github.com/Senzing/docker-init-container
+    - https://github.com/senzing-garage/charts/tree/master/charts/senzing-init-container
+    - https://github.com/senzing-garage/docker-init-container
     type: application
     urls:
     - senzing-init-container-2.0.0.tgz
@@ -303,7 +303,7 @@ entries:
       version: 1.0.1
     description: Postgresql client
     digest: 463609b857e6fd8f6a4079bb6c438e655e2385012da9d9d016695ef2c9bdf56f
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-postgresql-client
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-postgresql-client
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - postgresql
@@ -312,8 +312,8 @@ entries:
       name: Senzing
     name: senzing-postgresql-client
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/senzing-postgresql-client
-    - https://github.com/Senzing/postgresql-client
+    - https://github.com/senzing-garage/charts/tree/master/charts/senzing-postgresql-client
+    - https://github.com/senzing-garage/postgresql-client
     type: application
     urls:
     - senzing-postgresql-client-2.0.0.tgz
@@ -327,7 +327,7 @@ entries:
       version: 1.0.1
     description: Processes Senzing redo records
     digest: 9e71ce48aa259c72d7ab32c802a50d42289044adedfa79e3cd26830acfd70c59
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-redoer
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-redoer
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - senzing
@@ -340,8 +340,8 @@ entries:
       name: Senzing
     name: senzing-redoer
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/senzing-redoer
-    - https://github.com/Senzing/redoer
+    - https://github.com/senzing-garage/charts/tree/master/charts/senzing-redoer
+    - https://github.com/senzing-garage/redoer
     type: application
     urls:
     - senzing-redoer-2.0.0.tgz
@@ -355,7 +355,7 @@ entries:
       version: 1.0.1
     description: A stream-based loader for Senzing
     digest: 4dc93708628b54adc2f9f78ae49cb572cb0be54f83a4f4454a8f77d1414b1e64
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-stream-loader
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-stream-loader
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - senzing
@@ -367,7 +367,7 @@ entries:
       name: Senzing
     name: senzing-stream-loader
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/senzing-template
+    - https://github.com/senzing-garage/charts/tree/master/charts/senzing-template
     type: application
     urls:
     - senzing-stream-loader-2.0.0.tgz
@@ -381,7 +381,7 @@ entries:
       version: 1.0.1
     description: A generator of Senzing data to feed a queue
     digest: 3b61cc1a83997f03c6e8246c81b7d445a62934882dd3be52eadd2531751b8ed2
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-stream-producer
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-stream-producer
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - senzing
@@ -393,8 +393,8 @@ entries:
       name: Senzing
     name: senzing-stream-producer
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/senzing-stream-producer
-    - https://github.com/Senzing/stream-producer
+    - https://github.com/senzing-garage/charts/tree/master/charts/senzing-stream-producer
+    - https://github.com/senzing-garage/stream-producer
     type: application
     urls:
     - senzing-stream-producer-2.0.0.tgz
@@ -408,7 +408,7 @@ entries:
       version: 1.0.1
     description: A wrapper over yum package installer prepared for Senzing installs
     digest: d912a6fb1e493923ce6abbe755236edf54d0c0d90f66610256bc0a4df294c832
-    home: https://github.com/Senzing/charts/tree/master/charts/senzing-yum
+    home: https://github.com/senzing-garage/charts/tree/master/charts/senzing-yum
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - senzing
@@ -418,8 +418,8 @@ entries:
       name: Senzing
     name: senzing-yum
     sources:
-    - https://github.com/Senzing/charts/tree/master/charts/senzing-yum
-    - https://github.com/Senzing/docker-yum
+    - https://github.com/senzing-garage/charts/tree/master/charts/senzing-yum
+    - https://github.com/senzing-garage/docker-yum
     type: application
     urls:
     - senzing-yum-2.0.0.tgz
@@ -433,7 +433,7 @@ entries:
       version: 1.0.1
     description: SwaggerAPI Swagger UI
     digest: e974a5547863f449f7e53343e73722aabc57d0a26a37f6951e966a96d5233c06
-    home: https://github.com/Senzing/charts/tree/master/charts/swaggerapi-swagger-ui
+    home: https://github.com/senzing-garage/charts/tree/master/charts/swaggerapi-swagger-ui
     icon: https://avatars2.githubusercontent.com/u/43552726?s=200&v=4
     keywords:
     - senzing
@@ -444,7 +444,7 @@ entries:
     sources:
     - https://github.com/swagger-api/swagger-ui
     - https://hub.docker.com/r/swaggerapi/swagger-ui
-    - https://github.com/Senzing/charts/tree/master/charts/swaggerapi-swagger-ui
+    - https://github.com/senzing-garage/charts/tree/master/charts/swaggerapi-swagger-ui
     type: application
     urls:
     - swaggerapi-swagger-ui-2.0.0.tgz

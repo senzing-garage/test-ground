@@ -1,7 +1,7 @@
 # Senzing Helm Charts
 
 The repository of Senzing Helm Charts is located at
-[github.com/Senzing/charts](https://github.com/Senzing/charts).
+[github.com/Senzing/charts](https://github.com/senzing-garage/charts).
 
 ## Add helm repository
 
