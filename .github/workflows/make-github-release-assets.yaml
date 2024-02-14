@@ -1,4 +1,4 @@
-name: make-github-release-assets.yaml
+name: make github release assets
 
 on:
   push:
@@ -7,15 +7,16 @@ on:
 
 jobs:
   build:
-    name: Publish binaries
+    name: publish binaries
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: checkout repository
         uses: actions/checkout@v4
-      - run: pwd
+
       - run: echo "Test file" > /tmp/bob.txt
-      - name: Upload binaries to release
+
+      - name: upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
