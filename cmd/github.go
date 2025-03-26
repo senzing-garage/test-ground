@@ -1,15 +1,15 @@
-// 0.0.18
-// Created by make-go-github-file.yaml on Thu Oct 19 16:12:16 UTC 2023
+// 0.0.19
+// Created by senzing-factory/github-action-make-go-github-file.yaml on Wed Mar 26 21:16:24 UTC 2025
 //
 //lint:file-ignore U1000 Ignore all unused code, it's generated
 package cmd
 
 var (
-	githubDate           string = "2023-10-19"
-	githubIteration      string = "0"
-	githubRef            string = "refs/tags/0.0.18"
-	githubRefName        string = "0.0.18"
-	githubRepository     string = "Senzing/test-ground"
-	githubRepositoryName string = "test-ground"
-	githubVersion        string = "0.0.18"
+	githubDate           = "2025-03-26"
+	githubIteration      = "0"
+	githubRef            = "refs/tags/0.0.19"
+	githubRefName        = "0.0.19"
+	githubRepository     = "senzing-garage/test-ground"
+	githubRepositoryName = "test-ground"
+	githubVersion        = "0.0.19"
 )
