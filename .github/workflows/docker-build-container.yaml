@@ -21,7 +21,7 @@ jobs:
         shell: bash
 
       - name: build docker image
-        uses: senzing-factory/github-action-docker-buildx-build@29-skern
+        uses: senzing-factory/github-action-docker-buildx-build@skern-file-override
         with:
           image-repository: senzing/${{ steps.repo-basename.outputs.repo }}
           password: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
