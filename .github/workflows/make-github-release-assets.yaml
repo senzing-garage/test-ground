@@ -11,6 +11,8 @@ permissions:
 jobs:
   build:
     name: publish binaries
+    outputs:
+      status: ${{ job.status }}
     runs-on: ubuntu-latest
 
     steps:
@@ -28,3 +30,12 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
           body: "This is my release text"
+
+  slack-notification:
+    needs: [build]
+    if: ${{ always() && contains(fromJSON('["failure", "cancelled"]'), needs.build.outputs.status) }}
+    secrets:
+      SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+    uses: senzing-factory/build-resources/.github/workflows/build-failure-slack-notification.yaml@179-skern
+    with:
+      job-status: ${{ needs.build.outputs.status }}
