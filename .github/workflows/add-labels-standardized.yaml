@@ -14,7 +14,7 @@ jobs:
     secrets:
       ORG_MEMBERSHIP_TOKEN: ${{ secrets.ORG_MEMBERSHIP_TOKEN }}
       SENZING_MEMBERS: ${{ secrets.SENZING_MEMBERS }}
-    uses: senzing-factory/build-resources/.github/workflows/add-labels-to-issue.yaml@v2
+    uses: senzing-factory/build-resources/.github/workflows/add-labels-to-issue.yaml@179-skern
 
   slack-notification:
     needs: [add-issue-labels]
