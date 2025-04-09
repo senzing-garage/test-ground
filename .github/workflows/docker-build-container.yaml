@@ -35,3 +35,5 @@ jobs:
     secrets:
       SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
     uses: senzing-factory/build-resources/.github/workflows/build-failure-slack-notification.yaml@179-skern
+    with:
+      job-status: ${{ needs.docker-build-container.outputs.status }}
