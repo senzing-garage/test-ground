@@ -1,4 +1,4 @@
-FROM  debian:12.10-sli
+FROM  debian:12.10-slim
 
 USER 1001
 
