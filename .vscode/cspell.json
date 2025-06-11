@@ -1,0 +1,56 @@
+{
+  // Version of the setting file.  Always 0.2
+  "version": "0.2",
+  // language - current active spelling language
+  "language": "en",
+  // words - list of words to be always considered correct
+  "words": [
+      "alnum",
+      "analysing",
+      "arey",
+      "astring",
+      "bitnami",
+      "boto",
+      "buildx",
+      "CCLA",
+      "CODEOWNER",
+      "CONFIGPATH",
+      "configurator",
+      "confluentinc",
+      "dockerhub",
+      "dohelper",
+      "gaierror",
+      "getframe",
+      "getgid",
+      "getuid",
+      "ICLA",
+      "jsonline",
+      "mypy",
+      "phppgadmin",
+      "pstack",
+      "psutil",
+      "psycopg",
+      "pydev",
+      "pylint",
+      "rabbitmq",
+      "redoer",
+      "Redrive",
+      "reinit",
+      "RESOURCEPATH",
+      "Senzing",
+      "servicebus",
+      "shellcheck",
+      "stackoverflow",
+      "SUPPORTPATH",
+      "svenstaro",
+      "swaggerapi",
+      "threadsafe",
+      "toplevel",
+      "withinfo"
+    ],
+  "ignorePaths": [
+    ".git/**",
+    ".mypy_cache/**",
+    "docs/index.html"
+  ]
+}
