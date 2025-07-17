@@ -7,30 +7,30 @@ The repository of Senzing Helm Charts is located at
 
 1. Example:
 
-    ```console
-    helm repo add senzing 'https://senzing.github.io/charts/'
-    ```
+   ```console
+   helm repo add senzing 'https://senzing.github.io/charts/'
+   ```
 
 ## List helm repositories
 
 1. Example:
 
-    ```console
-    helm repo list
-    ```
+   ```console
+   helm repo list
+   ```
 
 ## View charts in Senzing Helm repository
 
 1. Example:
 
-    ```console
-    helm search senzing
-    ```
+   ```console
+   helm search senzing
+   ```
 
 ## Remove helm repository
 
 1. Example:
 
-    ```console
-    helm repo remove senzing
-    ```
+   ```console
+   helm repo remove senzing
+   ```
