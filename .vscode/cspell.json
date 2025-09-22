@@ -36,8 +36,10 @@
     "redoer",
     "Redrive",
     "reinit",
+    "renovatebot",
     "RESOURCEPATH",
     "Senzing",
+    "senzingapi",
     "servicebus",
     "shellcheck",
     "stackoverflow",
@@ -49,5 +51,9 @@
     "venv",
     "withinfo"
   ],
-  "ignorePaths": [".git/**", ".mypy_cache/**", "docs/index.html"]
+  "ignorePaths": [
+    ".git/**",
+    ".mypy_cache/**",
+    "docs/index.html"
+  ]
 }
