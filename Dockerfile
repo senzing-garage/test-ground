@@ -1,4 +1,4 @@
-ARG IMAGE_SENZINGAPI_RUNTIME=senzing/senzingapi-runtime:3.12.6
+ARG IMAGE_SENZINGAPI_RUNTIME=senzing/senzingapi-runtime:3.12.8@sha256:3663a1971e564af4d12ecdb0c90a4f46418b77dc229ec6c9f692efc59d1c67ae
 
 FROM ${IMAGE_SENZINGAPI_RUNTIME} AS senzingapi-runtime
 
