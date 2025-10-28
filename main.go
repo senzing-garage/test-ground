@@ -42,7 +42,13 @@ func main() {
 	err = createConfigManager(instanceName, senzingEngineSettings, logLevel)
 	panicOnError(err)
 
+	err = createConfigManager(instanceName, senzingEngineSettings, logLevel)
+	panicOnError(err)
+
 	// Destroy Configuration manager.
+
+	err = destroyConfigManager()
+	panicOnError(err)
 
 	err = destroyConfigManager()
 	panicOnError(err)
