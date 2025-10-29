@@ -70,30 +70,6 @@ func main() {
 // Supporting functions
 // ----------------------------------------------------------------------------
 
-func createEngine(
-	instanceName string,
-	settings string,
-	verboseLogging int64,
-) error {
-	runtime.LockOSThread()
-	defer runtime.UnlockOSThread()
-
-	var err error
-
-	moduleNameForC := C.CString(instanceName)
-	defer C.free(unsafe.Pointer(moduleNameForC))
-
-	iniParamsForC := C.CString(settings)
-	defer C.free(unsafe.Pointer(iniParamsForC))
-
-	result := C.Sz_init(moduleNameForC, iniParamsForC, C.int64_t(verboseLogging))
-	if result != noError {
-		err = fmt.Errorf("Sz_init failed. Settings: %s", settings)
-	}
-
-	return err
-}
-
 func createConfigManager(
 	instanceName string,
 	settings string,
