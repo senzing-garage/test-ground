@@ -4,36 +4,41 @@ on:
   pull_request:
     types: [opened, synchronize]
 
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+
 jobs:
   review:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: false
+
+      - name: Install Claude Code CLI
+        run: |
+          curl -fsSL https://claude.ai/install.sh | bash -s 2.0.29
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Authenticate Claude Code with OIDC
+        run: |
+          # The CLI should handle OIDC automatically in GitHub Actions
+          claude --version
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
       - name: Get PR diff
-        id: diff
         run: |
           gh pr diff ${{ github.event.pull_request.number }} > pr_diff.txt
         env:
           GH_TOKEN: ${{ github.token }}
 
-      - name: Review with Claude
+      - name: Create review prompt
         run: |
-          python3 << 'EOF'
-          import os
-          import json
-          import urllib.request
-
-          with open('pr_diff.txt', 'r') as f:
-              diff = f.read()
-
-          prompt = f"""Review this PR against our team checklist:
+          cat > prompt.txt << 'EOF'
+          Review this PR against our team checklist:
 
           ## Code Quality
           - [ ] Code follows our style guide
@@ -59,40 +64,25 @@ jobs:
           - [ ] Proper error handling
           - [ ] No sensitive data in logs
 
-          PR diff:
-          ```
-          {diff[:50000]}
-          ```
+          For each item, provide ✅/❌ and explain any issues.
 
-          Provide a summary with ✅/❌ for each category."""
-
-          data = {
-              "model": "claude-sonnet-4-20250514",
-              "max_tokens": 4096,
-              "messages": [{"role": "user", "content": prompt}]
-          }
-
-          req = urllib.request.Request(
-              'https://api.anthropic.com/v1/messages',
-              data=json.dumps(data).encode('utf-8'),
-              headers={
-                  'Content-Type': 'application/json',
-                  'Authorization': f'Bearer {os.environ["CLAUDE_CODE_OAUTH_TOKEN"]}',
-                  'anthropic-version': '2023-06-01'
-              }
-          )
-
-          with urllib.request.urlopen(req) as response:
-              result = json.loads(response.read())
-              with open('review.txt', 'w') as f:
-                  f.write(result['content'][0]['text'])
+          Here's the PR diff:
           EOF
+          cat pr_diff.txt >> prompt.txt
+
+      - name: Run Claude Code Review
+        run: |
+          claude -p "$(cat prompt.txt)" > review.txt
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
-      - name: Post review
+      - name: Post review comment
         run: |
-          gh pr comment ${{ github.event.pull_request.number }} --body "$(cat review.txt)"
+          gh pr comment ${{ github.event.pull_request.number }} --body "## 🤖 Claude PR Review
+
+          $(cat review.txt)
+
+          ---
+          *Automated review via Claude Code CLI*"
         env:
           GH_TOKEN: ${{ github.token }}
-  
