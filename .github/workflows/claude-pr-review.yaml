@@ -1,88 +1,20 @@
-name: PR Review Checklist
+name: Claude PR Review
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
 
 on:
   pull_request:
     types: [opened, synchronize]
 
-permissions:
-  contents: read
-  pull-requests: write
-  id-token: write
+permissions: {}
 
 jobs:
   review:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-
-      - name: Install Claude Code CLI
-        run: |
-          curl -fsSL https://claude.ai/install.sh | bash -s 2.0.29
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
-
-      - name: Authenticate Claude Code with OIDC
-        run: |
-          # The CLI should handle OIDC automatically in GitHub Actions
-          claude --version
-        env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-
-      - name: Get PR diff
-        run: |
-          gh pr diff ${{ github.event.pull_request.number }} > pr_diff.txt
-        env:
-          GH_TOKEN: ${{ github.token }}
-
-      - name: Create review prompt
-        run: |
-          cat > prompt.txt << 'EOF'
-          Review this PR against our team checklist:
-
-          ## Code Quality
-          - [ ] Code follows our style guide
-          - [ ] No commented-out code
-          - [ ] Meaningful variable names
-          - [ ] DRY principle followed
-
-          ## Testing
-          - [ ] Unit tests for new functions
-          - [ ] Integration tests for new endpoints
-          - [ ] Edge cases covered
-          - [ ] Test coverage > 80%
-
-          ## Documentation
-          - [ ] README updated if needed
-          - [ ] API docs updated
-          - [ ] Inline comments for complex logic
-          - [ ] CHANGELOG.md updated
-
-          ## Security
-          - [ ] No hardcoded credentials
-          - [ ] Input validation implemented
-          - [ ] Proper error handling
-          - [ ] No sensitive data in logs
-
-          For each item, provide ✅/❌ and explain any issues.
-
-          Here's the PR diff:
-          EOF
-          cat pr_diff.txt >> prompt.txt
-
-      - name: Run Claude Code Review
-        run: |
-          claude -p "$(cat prompt.txt)" > review.txt
-        env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-
-      - name: Post review comment
-        run: |
-          gh pr comment ${{ github.event.pull_request.number }} --body "## 🤖 Claude PR Review
-
-          $(cat review.txt)
-
-          ---
-          *Automated review via Claude Code CLI*"
-        env:
-          GH_TOKEN: ${{ github.token }}
+    uses: senzing-factory/build-resources/.github/workflows/claude-pull-request-review.yaml@v3
+    permissions:
+      contents: read
+      pull-requests: write
+    secrets:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
