@@ -50,9 +50,5 @@
     "venv",
     "withinfo"
   ],
-  "ignorePaths": [
-    ".git/**",
-    ".mypy_cache/**",
-    "docs/index.html"
-  ]
+  "ignorePaths": [".git/**", ".mypy_cache/**", "docs/index.html"]
 }
