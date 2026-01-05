@@ -6,6 +6,7 @@
     "docker:pinDigests"
   ],
   "enabledManagers": ["dockerfile", "docker-compose"],
+  "schedule": ["on sunday"],
   "prCreation": "not-pending",
   "packageRules": [
     {
