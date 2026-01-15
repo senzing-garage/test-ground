@@ -50,7 +50,8 @@
     "threadsafe",
     "toplevel",
     "venv",
-    "withinfo"
+    "withinfo",
+    "yfinance"
   ],
   "ignorePaths": [
     ".git/**",
