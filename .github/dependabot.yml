@@ -5,7 +5,7 @@ version: 2
 updates:
   - package-ecosystem: github-actions
     assignees:
-      - senzing-garage/senzing-devsecops
+      - "senzing-garage/senzing-devsecops"
     cooldown:
       default-days: 21
     directory: /
