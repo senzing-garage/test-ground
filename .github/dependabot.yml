@@ -3,12 +3,14 @@
 
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
+  - package-ecosystem: github-actions
+    assignees:
+      - senzing-garage/senzing-devsecops
     cooldown:
       default-days: 21
-    directory: "/"
+    directory: /
     schedule:
-      interval: "daily"
+      interval: daily
   - package-ecosystem: pip
     cooldown:
       default-days: 21
